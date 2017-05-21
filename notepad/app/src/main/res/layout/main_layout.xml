@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper">
+    <ListView
+        android:paddingTop="10dp"
+
+        android:id="@id/android:list" android:layout_width="fill_parent"
+        android:layout_height="0dip" android:layout_weight="1"
+        android:drawSelectorOnTop="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbarThumbVertical="@android:color/black"
+         />
+    <TextView android:id="@id/android:empty" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Can not find the file!" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- 定义一个TextView，用于作为列表项的一部分。 -->
+    <TextView android:id="@+id/search_text1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip"
+        android:singleLine="true"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"/>
+    <!-- 定义一个TextView，用于作为列表项的一部分。 -->
+    <TextView android:id="@+id/search_text2"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip"
+        android:singleLine="true"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_save"
+          android:icon="@drawable/ic_menu_save"
+          android:alphabeticShortcut='s'
+          android:title="@string/menu_save"
+          android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/menu_revert"
+          android:icon="@drawable/ic_menu_revert"
+          android:title="@string/menu_revert" />
+    <item android:id="@+id/menu_delete"
+          android:icon="@drawable/ic_menu_delete"
+          android:title="@string/menu_delete"
+          android:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/submenu"
+        android:title="背景色">
+    <menu>
+        <item
+            android:id="@+id/pink"
+            android:title="粉色"
+            />
+        <item
+            android:id="@+id/white"
+            android:title="白色"
+            />
+        <item
+            android:id="@+id/light"
+            android:title="浅色"
+            />
+    </menu>
+    </item>
+</menu>
