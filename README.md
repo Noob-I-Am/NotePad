@@ -1,6 +1,6 @@
-#   记事本应用
+#   <font size=7>记事本应用</font>
 
-####以谷歌NotePadDemo为基础进行修改
+####<font size=5>以谷歌NotePadDemo为基础进行修改</font>
 
 
 >已实现的基本功能修改 ：显示修改时间戳，添加标题搜索功能
@@ -11,14 +11,17 @@
 
 ![笔记条目](https://raw.githubusercontent.com/Noob-I-Am/NotePad/master/image/%E6%9D%A1%E7%9B%AE.PNG )
 
-如图所示，在笔记条目的右下角显示了最后进入修改编辑状态的时间
+<font size=5>如图所示，在笔记条目的右下角显示了最后进入修改编辑状态的时间</font>
+
+<font size=5>首先在列表项布局文件noteslist_item.xml中添加textview来显示时间并调整其位置于右下角.在notesList类中修改映射数据库的PROJECTTION字符串数组，添加日期列COLUMN_NAME_CREATE_DATE，在适配器中将其和显示时间的textview绑定。</font>
 
 
 ##二,标题搜索功能
 
-**通过TitleBar上的搜索按键进入实现搜索功能的activity**
+<font size=5>**通过TitleBar上的搜索按键进入实现搜索功能的activity**</font>
 
 <img src="https://raw.githubusercontent.com/Noob-I-Am/NotePad/master/image/mysearch.gif" width="50%"  />
+<font size=5>**创建NoteSearch类，用于执行搜索操作，并设计对应布局文件note_search.xml，这个布局文件中定义了一个搜索框searchView和用于显示的列表listView。设置searchview的监听事件并重写onQueryTextChange方法实现搜索,listView仅显示和输入匹配标题的项。**</font>
 
 
 ##三,背景色更换
@@ -28,7 +31,7 @@
 
 ##四，界面美化
 
-应用的主要两个界面NoteEditor和NotesList都使用了黑色色调的标题栏
+<font size=5>应用的主要两个界面NoteEditor和NotesList都使用了黑色色调的标题栏
 
 NotesList使用ThemeOverlay.Material.Dark的主题，而NoteEditor使用Theme.Holo.Light.DarkActionBar主题。
 
