@@ -24,6 +24,7 @@ public class NoteSearch extends Activity {
         setContentView(R.layout.note_search);
         searchView=(SearchView)findViewById(R.id.searchview);
         listView=(ListView)findViewById(R.id.listview);
+
         simpleCursorAdapter = new SimpleCursorAdapter(this, R.layout.search_item, mCursor,
                 new String[] {NotePad.Notes.COLUMN_NAME_TITLE, NotePad.Notes.COLUMN_NAME_CREATE_DATE}, new int[] { R.id.search_text1,R.id.search_text2 });
         searchView.setIconifiedByDefault(false);
@@ -36,13 +37,14 @@ public class NoteSearch extends Activity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 if(newText != null && !newText.isEmpty()) {
-                    String selection = NotePad.Notes.COLUMN_NAME_TITLE + " LIKE '%" + newText + "%' " + " OR "
-                            + NotePad.Notes.COLUMN_NAME_CREATE_DATE + " LIKE '%" + newText + "%' ";
+
+                    String selection = NotePad.Notes.COLUMN_NAME_TITLE + " LIKE '%" + newText + "%' ";
                     Intent intent = getIntent();
 
                     // If there is no data associated with the Intent, sets the data to the default URI, which
                     // accesses a list of notes.
                     if (intent.getData() == null) {
+
                         intent.setData(NotePad.Notes.CONTENT_URI);
                     }
                     mCursor = managedQuery(
@@ -56,6 +58,7 @@ public class NoteSearch extends Activity {
                     listView.setAdapter(simpleCursorAdapter);
                 }
                 else {
+
                     String[] lstSource = {};
                     ArrayAdapter adapter = new ArrayAdapter(NoteSearch.this,android.R.layout.simple_list_item_1,lstSource);
                     listView.setAdapter(adapter);

@@ -20,7 +20,7 @@
     android:layout_height="70dp"
 
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
-    android:background="#ffffff"
+    android:background="@drawable/shadow"
     android:translationZ="3dp"
     android:elevation="3dp"
    >
@@ -28,11 +28,13 @@
         android:id="@+id/colorText"
         android:layout_width="5dp"
         android:layout_height="fill_parent"
+
         />
    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+       >
 <TextView android:id="@android:id/text1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
